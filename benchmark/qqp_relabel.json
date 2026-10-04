@@ -1,0 +1,13 @@
+{
+  "rule": "same = the cached answer to `a` would fully satisfy someone asking `b`. Questions about an attached image or file are never the same.",
+  "labelled_by": "Claude (Opus 5.5), Oct 2026, after seeing v6 errors on some of these pairs; spot-check before trusting",
+  "sample": "fetch_qqp.py --n 300 --seed 0",
+  "changed": {
+    "16120": false, "26169": false, "32513": false, "14842": false, "15910": false, "21347": false,
+    "31648": false, "29884": false, "14657": false, "10093": false, "24383": false, "4167": false,
+    "29355": false, "3210": false, "5919": false, "6786": false, "12440": false,
+    "26935": true, "33276": true, "18449": true, "807": true, "27595": true, "32948": true,
+    "33573": true, "10208": true, "8109": true, "6006": true, "24337": true, "29432": true,
+    "23642": true, "2307": true, "14843": true, "32859": true
+  }
+}

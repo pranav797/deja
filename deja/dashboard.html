@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Déjà Dashboard</title>
+<style>
+  :root {
+    --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+    --hairline: #e1e0d9; --ring: rgba(11,11,11,0.10); --good: #0ca30c; --good-text: #006300;
+    --serious: #ec835a; --flash: #eef6ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+      --hairline: #2c2c2a; --ring: rgba(255,255,255,0.10); --good-text: #0ca30c; --flash: #17271a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 16px 40px; }
+  header { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+  h1 { font-size: 20px; margin: 0; font-weight: 600; }
+  .live { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); font-size: 13px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--good); }
+  .live.off .dot { background: var(--serious); }
+  header a { margin-left: auto; color: var(--ink-2); font-size: 13px; }
+  .card { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 16px; }
+  .top { display: grid; grid-template-columns: minmax(240px, 1fr) 2fr; gap: 16px; margin-bottom: 16px; }
+  @media (max-width: 800px) { .top { grid-template-columns: 1fr; } }
+  .label { color: var(--ink-2); font-size: 13px; }
+  .hero { font-size: 52px; font-weight: 600; line-height: 1.1; margin: 6px 0; }
+  .sub { color: var(--muted); font-size: 13px; }
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 560px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+  .tile .value { font-size: 24px; font-weight: 600; margin-top: 2px; }
+  .breakdown { margin-top: 12px; color: var(--ink-2); font-size: 13px; }
+  h2 { font-size: 15px; margin: 0 0 4px; font-weight: 600; }
+  .scroll { overflow-x: auto; margin-top: 8px; }
+  table { width: 100%; border-collapse: collapse; min-width: 760px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 6px 8px; border-bottom: 1px solid var(--hairline); }
+  td { padding: 8px; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td.q { max-width: 340px; overflow-wrap: anywhere; }
+  td.closest { max-width: 280px; color: var(--ink-2); overflow-wrap: anywhere; }
+  .when { color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-weight: 500; }
+  .badge svg { flex: none; }
+  tr.fresh td { animation: flash 1.6s ease-out; }
+  @keyframes flash { from { background: var(--flash); } to { background: transparent; } }
+  @media (prefers-reduced-motion: reduce) { tr.fresh td { animation: none; } }
+  .empty { color: var(--muted); padding: 24px 8px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Déjà Dashboard</h1>
+    <span class="live" id="live" role="status"><span class="dot"></span><span id="live-text">Connecting…</span></span>
+    <a href="/">Open the playground</a>
+  </header>
+
+  <div class="top">
+    <div class="card">
+      <div class="label">Net saved</div>
+      <div class="hero" id="net">$0</div>
+      <div class="sub" id="net-sub">Saved on answers, minus what the checks cost.</div>
+    </div>
+    <div class="card">
+      <div class="tiles">
+        <div class="tile"><div class="label">Questions</div><div class="value" id="t-questions">0</div></div>
+        <div class="tile"><div class="label">Answered from cache</div><div class="value" id="t-reused">0</div></div>
+        <div class="tile"><div class="label">Time saved</div><div class="value" id="t-time">0 s</div></div>
+        <div class="tile"><div class="label">Saved on answers</div><div class="value" id="t-saved">$0</div></div>
+        <div class="tile"><div class="label">Spent on checks</div><div class="value" id="t-spent">$0</div></div>
+        <div class="tile"><div class="label">Blocked by the checker</div><div class="value" id="t-blocked">0</div></div>
+      </div>
+      <div class="breakdown" id="breakdown"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Live feed</h2>
+    <div class="sub">Every chat request since the proxy started, newest first. Requests that aren't chat (model lists, embeddings) aren't shown.</div>
+    <div class="scroll">
+      <table>
+        <thead><tr>
+          <th>Time</th><th>Question</th><th>Result</th><th>Closest earlier question</th>
+          <th class="num">Similarity</th><th class="num">Took</th><th class="num">Saved</th>
+        </tr></thead>
+        <tbody id="feed"><tr><td colspan="7" class="empty">No chats yet. Send a message in Open WebUI and it shows up here.</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const money = (x) => !x ? "$0" : x >= 1 ? "$" + x.toFixed(2) : x >= 0.01 ? "$" + x.toFixed(3) : "$" + x.toFixed(5);
+const n = (k, word, plural = word + "s") => `${k} ${k === 1 ? word : plural}`;
+const secs = (x) => x >= 60 ? (x / 60).toFixed(1) + " min" : x.toFixed(1) + " s";
+
+// Status = icon + word; the color is never the only signal.
+const ICON = {
+  check: '<svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="var(--good)"/><path d="M4.5 8.2l2.3 2.3 4.7-4.9" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>',
+  block: '<svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" stroke="var(--serious)" stroke-width="1.8" fill="none"/><path d="M3.8 12.2l8.4-8.4" stroke="var(--serious)" stroke-width="1.8"/></svg>',
+  new: '<svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.2" stroke="var(--muted)" stroke-width="1.8" fill="none"/></svg>',
+  skip: '<svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 4l5 4-5 4zM8.5 4l5 4-5 4z" fill="var(--muted)"/></svg>',
+};
+const RESULT = {
+  "exact": [ICON.check, "Reused · exact repeat"],
+  "reworded": [ICON.check, "Reused · reworded"],
+  "other-chat": [ICON.check, "Reused · other context"],
+  "blocked": [ICON.block, "New · checker blocked a match"],
+  "skipped": [ICON.skip, "New · check not worth it"],
+  "new": [ICON.new, "New answer"],
+  "not-cacheable": [ICON.new, "Not cacheable"],
+};
+
+function cell(text, cls) {
+  const td = document.createElement("td");
+  if (cls) td.className = cls;
+  td.textContent = text;
+  return td;
+}
+
+function row(e, fresh) {
+  const tr = document.createElement("tr");
+  if (fresh) tr.className = "fresh";
+  tr.append(cell(new Date(e.time * 1000).toLocaleTimeString(), "when"));
+  tr.append(cell(e.question ?? "(attachment or not cacheable)", "q"));
+  const [icon, label] = RESULT[e.result] || [ICON.new, e.result];
+  const td = document.createElement("td");
+  td.innerHTML = `<span class="badge">${icon}<span></span></span>`;
+  td.querySelector("span span").textContent = label;
+  if (e.result === "other-chat") td.title = "Matched a question asked with a different conversation history (another chat, or earlier in this one). The chat checker read this conversation and approved it.";
+  tr.append(td);
+  tr.append(cell(e.closest ?? "—", "closest"));
+  tr.append(cell(e.similarity == null ? "—" : e.similarity.toFixed(3), "num"));
+  tr.append(cell(e.ms >= 1000 ? (e.ms / 1000).toFixed(1) + " s" : e.ms + " ms", "num"));
+  tr.append(cell(e.saved_dollars ? money(e.saved_dollars) : "—", "num"));
+  return tr;
+}
+
+let lastId = 0, boot = null, firstLoad = true;
+
+async function tick() {
+  try {
+    const [s, { boot: b, events }] = await Promise.all([
+      fetch("/deja/stats").then((r) => r.json()),
+      fetch("/deja/events?after=" + lastId).then((r) => r.json()),
+    ]);
+    const hits = s.exact_hits + s.semantic_hits, questions = hits + s.misses + s.bypassed;
+    $("net").textContent = money(s.dollars_saved - s.verify_dollars).replace("$-", "−$");
+    $("net-sub").textContent = `${money(s.dollars_saved)} saved on answers − ${money(s.verify_dollars)} spent on checks.`;
+    $("t-questions").textContent = questions.toLocaleString();
+    $("t-reused").textContent = `${hits} · ${questions ? Math.round((hits / questions) * 100) : 0}%`;
+    $("t-time").textContent = secs(s.seconds_saved);
+    $("t-saved").textContent = money(s.dollars_saved);
+    $("t-spent").textContent = money(s.verify_dollars);
+    $("t-blocked").textContent = s.verify_rejects;
+    $("breakdown").textContent = `Reuses: ${n(s.exact_hits, "exact repeat")} · ${n(s.semantic_hits - s.cross_chat_hits, "rewording")} in the same context · ${n(s.cross_chat_hits, "match", "matches")} from another context. ${n(s.not_worth_verifying, "check")} skipped as not worth it · ${n(s.errors, "error")}.`;
+
+    if (b !== boot) {  // proxy restarted: its event ids start over
+      if (boot !== null) { lastId = 0; $("feed").replaceChildren(); }
+      boot = b;
+    }
+    if (events.length) {
+      const feed = $("feed");
+      feed.querySelectorAll(".empty").forEach((td) => td.parentElement.remove());
+      for (const e of events) feed.prepend(row(e, !firstLoad));
+      while (feed.children.length > 200) feed.lastChild.remove();
+      lastId = events[events.length - 1].id;
+    }
+    firstLoad = false;
+    $("live").classList.remove("off");
+    $("live-text").textContent = "Live · updates every second";
+  } catch {
+    $("live").classList.add("off");
+    $("live-text").textContent = "Disconnected: is the Déjà proxy running?";
+  }
+}
+
+tick();
+setInterval(tick, 1000);
+</script>
+</body>
+</html>

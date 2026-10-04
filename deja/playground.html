@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Déjà Playground</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --panel: #ffffff; --text: #1d1d1b; --muted: #6b6b66; --line: #e4e4df;
+    --accent: #2f5bd3; --hit: #1f7a4d; --hit-bg: #e3f4ea; --miss: #6b6b66; --miss-bg: #efefeb;
+    --warn: #9a5b00; --warn-bg: #fdf0dc; --err: #b42318; --err-bg: #fde8e6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151514; --panel: #1f1f1d; --text: #ececea; --muted: #a0a09a; --line: #33332f;
+      --accent: #7c9cf5; --hit: #6fd39f; --hit-bg: #17321f; --miss: #a0a09a; --miss-bg: #2a2a27;
+      --warn: #f0b45c; --warn-bg: #3a2a12; --err: #ff8a80; --err-bg: #3d1a17;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px; display: grid; grid-template-columns: 1fr 320px; gap: 20px; }
+  @media (max-width: 860px) { .wrap { grid-template-columns: 1fr; } }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 16px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  form { display: flex; gap: 8px; }
+  textarea { flex: 1; resize: vertical; min-height: 44px; padding: 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--text); font: inherit; }
+  button { font: inherit; border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; background: var(--panel); color: var(--text); cursor: pointer; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button:disabled { opacity: .5; cursor: default; }
+  select { font: inherit; padding: 6px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--text); }
+  .row { display: flex; align-items: center; gap: 8px; margin-top: 10px; color: var(--muted); font-size: 13px; flex-wrap: wrap; }
+  #log { display: flex; flex-direction: column-reverse; gap: 12px; margin-top: 16px; }
+  .turn .q { font-weight: 600; margin-bottom: 6px; }
+  .turn .a { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .badge { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 600; margin-bottom: 8px; }
+  .hit { color: var(--hit); background: var(--hit-bg); }
+  .miss { color: var(--miss); background: var(--miss-bg); }
+  .warn { color: var(--warn); background: var(--warn-bg); }
+  .err { color: var(--err); background: var(--err-bg); }
+  .why { color: var(--muted); font-size: 13px; margin-top: 8px; }
+  h2 { font-size: 15px; margin: 0 0 10px; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .stat { background: var(--bg); border-radius: 8px; padding: 8px 10px; }
+  .stat b { display: block; font-size: 18px; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  aside { display: flex; flex-direction: column; gap: 16px; }
+  .samples button { display: block; width: 100%; text-align: left; margin-bottom: 6px; font-size: 13px; }
+  .samples h3 { font-size: 13px; color: var(--muted); margin: 12px 0 6px; font-weight: 600; }
+  .samples h3:first-of-type { margin-top: 0; }
+  .note { color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <main>
+    <h1>Déjà Playground</h1>
+    <p class="sub">Ask a question, then ask it again in different words. If Déjà reuses the earlier answer, you'll see why.</p>
+    <div class="panel">
+      <form id="form">
+        <textarea id="q" placeholder="Ask anything… (Enter to send, Shift+Enter for a new line)" required></textarea>
+        <button class="primary" id="send">Send</button>
+      </form>
+      <div class="row">
+        <label>Model <select id="model">
+          <option>gpt-4o-mini</option><option>gpt-4.1-mini</option><option>gpt-4.1</option><option>gpt-4o</option>
+        </select></label>
+        <span>· each question is sent on its own, with no chat history</span>
+      </div>
+    </div>
+    <div id="log"></div>
+  </main>
+
+  <aside>
+    <div class="panel">
+      <h2>This session</h2>
+      <div class="stats">
+        <div class="stat"><b id="s-req">0</b><span>questions</span></div>
+        <div class="stat"><b id="s-hit">0%</b><span>answered from cache</span></div>
+        <div class="stat"><b id="s-saved">$0</b><span>model cost saved</span></div>
+        <div class="stat"><b id="s-check">$0</b><span>spent on checks</span></div>
+      </div>
+      <p class="note" id="s-time"></p>
+      <button id="clear">Clear cache</button>
+      <p class="note"><a href="/dashboard">Open the live dashboard</a></p>
+    </div>
+
+    <div class="panel samples">
+      <h2>Try these in order</h2>
+      <h3>1. Ask something new</h3>
+      <button>Who wrote Pride and Prejudice?</button>
+      <button>How do I reverse a list in Python?</button>
+      <button>What's the flight time from New York to Tokyo?</button>
+      <h3>2. Reworded: should be reused</h3>
+      <button>Who is the author of Pride and Prejudice?</button>
+      <button>What's the way to reverse a Python list?</button>
+      <h3>3. Looks similar, different answer: should not be reused</h3>
+      <button>Who wrote Sense and Sensibility?</button>
+      <button>How do I reverse a list in JavaScript?</button>
+      <button>What's the flight time from Tokyo to New York?</button>
+      <p class="note">The last one is a known weak spot: the checker sometimes lets the New York → Tokyo answer through for it.</p>
+    </div>
+  </aside>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const fmt$ = (x) => x === 0 ? "$0" : x < 0.01 ? "$" + x.toFixed(5) : "$" + x.toFixed(2);
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+
+function explain(h, ms) {
+  const kind = h.get("x-deja-kind"), closest = h.get("x-deja-closest"), sim = h.get("x-deja-similarity"), verdict = h.get("x-deja-verdict");
+  const near = closest ? `“${decodeURIComponent(closest)}” (similarity ${sim})` : null;
+  const t = `${ms} ms`;
+  if (kind === "exact") return ["hit", "Reused · exact repeat", `Same question as before, so no model call. ${t}.`];
+  if (kind === "semantic") return ["hit", "Reused · reworded", `Matched ${near}, and the checker agreed one answer fits both. ${t}.`];
+  if (!near) return ["miss", "New answer", `Nothing similar in the cache yet, so this was sent to the model and saved. ${t}.`];
+  if (verdict === "no") return ["warn", "New answer · rejected a match", `Closest was ${near}, but the checker said it needs a different answer. ${t}.`];
+  if (verdict === "skipped") return ["miss", "New answer · check skipped", `Closest was ${near}, but checking would have cost more than calling the model. ${t}.`];
+  return ["miss", "New answer", `Closest was ${near}, which isn't similar enough to consider. ${t}.`];
+}
+
+async function ask(question) {
+  const turn = el("div", "panel turn");
+  turn.append(el("div", "q", question));
+  const status = el("span", "badge miss", "Thinking…");
+  turn.append(status);
+  $("log").append(turn);
+  $("send").disabled = true;
+  const t0 = performance.now();
+  try {
+    const r = await fetch("/v1/chat/completions", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ model: $("model").value, messages: [{ role: "user", content: question }] }),
+    });
+    const ms = Math.round(performance.now() - t0);
+    const body = await r.json();
+    if (!r.ok) throw new Error(body.error?.message || `HTTP ${r.status}`);
+    const [cls, label, why] = explain(r.headers, ms);
+    status.className = "badge " + cls;
+    status.textContent = label;
+    turn.append(el("div", "a", body.choices[0].message.content));
+    turn.append(el("div", "why", why));
+  } catch (e) {
+    status.className = "badge err";
+    status.textContent = "Error";
+    turn.append(el("div", "why", String(e.message || e)));
+  } finally {
+    $("send").disabled = false;
+    refreshStats();
+  }
+}
+
+async function refreshStats() {
+  try {
+    const s = await (await fetch("/deja/stats")).json();
+    const hits = s.exact_hits + s.semantic_hits;
+    $("s-req").textContent = hits + s.misses + s.bypassed;
+    $("s-hit").textContent = Math.round(s.hit_rate * 100) + "%";
+    $("s-saved").textContent = fmt$(s.dollars_saved);
+    $("s-check").textContent = fmt$(s.verify_dollars);
+    $("s-time").textContent = `${s.exact_hits} exact and ${s.semantic_hits} reworded reuses, ${s.verify_rejects} matches rejected by the checker, ~${s.seconds_saved.toFixed(1)} s of waiting saved.`;
+  } catch {}
+}
+
+$("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const q = $("q").value.trim();
+  if (q) { $("q").value = ""; ask(q); }
+});
+$("q").addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("form").requestSubmit(); }
+});
+document.querySelectorAll(".samples button").forEach((b) => b.addEventListener("click", () => ask(b.textContent)));
+$("clear").addEventListener("click", async () => {
+  await fetch("/deja/clear", { method: "POST" });
+  $("log").replaceChildren();
+  refreshStats();
+});
+refreshStats();
+</script>
+</body>
+</html>

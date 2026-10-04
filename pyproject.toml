@@ -1,0 +1,17 @@
+[project]
+name = "deja"
+version = "0.1.0"
+description = "Semantic cache for LLM calls: reuse answers for prompts that mean the same thing."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy", "openai>=1.0"]
+
+[project.optional-dependencies]
+proxy = ["fastapi", "httpx", "uvicorn"]
+
+[project.scripts]
+deja-proxy = "deja.proxy:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,296 @@
+{"a": "How do I parse JSON in Go?", "b": "How do I parse JSON in Rust?", "same": false, "category": "entity"}
+{"a": "What's the boiling point of ethanol?", "b": "What's the boiling point of methanol?", "same": false, "category": "entity"}
+{"a": "Who was the first president of the United States?", "b": "Who was the first president of France?", "same": false, "category": "entity"}
+{"a": "How do I set up ESLint in a React project?", "b": "How do I set up Prettier in a React project?", "same": false, "category": "entity"}
+{"a": "What's the difference between a crocodile and an alligator?", "b": "What's the difference between a frog and a toad?", "same": false, "category": "entity"}
+{"a": "Write a cover letter for a nursing job", "b": "Write a cover letter for a teaching job", "same": false, "category": "entity"}
+{"a": "How many moons does Jupiter have?", "b": "How many moons does Saturn have?", "same": false, "category": "entity"}
+{"a": "What's the main ingredient in guacamole?", "b": "What's the main ingredient in hummus?", "same": false, "category": "entity"}
+{"a": "How do I connect to PostgreSQL from Node.js?", "b": "How do I connect to MongoDB from Node.js?", "same": false, "category": "entity"}
+{"a": "What does the useEffect hook do in React?", "b": "What does the useMemo hook do in React?", "same": false, "category": "entity"}
+{"a": "Explain the rules of chess", "b": "Explain the rules of checkers", "same": false, "category": "entity"}
+{"a": "What is the national animal of Scotland?", "b": "What is the national animal of Wales?", "same": false, "category": "entity"}
+{"a": "How do I care for a snake plant?", "b": "How do I care for a fiddle leaf fig?", "same": false, "category": "entity"}
+{"a": "Summarize the plot of The Great Gatsby", "b": "Summarize the plot of Of Mice and Men", "same": false, "category": "entity"}
+{"a": "What's the chemical symbol for gold?", "b": "What's the chemical symbol for silver?", "same": false, "category": "entity"}
+{"a": "How do I train a model with PyTorch?", "b": "How do I train a model with TensorFlow?", "same": false, "category": "entity"}
+{"a": "What are the symptoms of diabetes?", "b": "What are the symptoms of hypothyroidism?", "same": false, "category": "entity"}
+{"a": "Write a Dockerfile for a Flask app", "b": "Write a Dockerfile for a Django app", "same": false, "category": "entity"}
+{"a": "What's the GDP of Brazil?", "b": "What's the GDP of Argentina?", "same": false, "category": "entity"}
+{"a": "Explain how a car engine works", "b": "Explain how an electric motor works", "same": false, "category": "entity"}
+{"a": "How do I deploy a site to Netlify?", "b": "How do I deploy a site to Vercel?", "same": false, "category": "entity"}
+{"a": "What language is spoken in Brazil?", "b": "What language is spoken in Belgium?", "same": false, "category": "entity"}
+{"a": "Who discovered penicillin?", "b": "Who discovered insulin?", "same": false, "category": "entity"}
+{"a": "How do I make a pivot table in Excel?", "b": "How do I make a pivot table in Google Sheets?", "same": false, "category": "entity"}
+{"a": "What does a product manager do?", "b": "What does a project manager do?", "same": false, "category": "entity"}
+{"a": "Explain the plot of the movie Inception", "b": "Explain the plot of the movie Interstellar", "same": false, "category": "entity"}
+{"a": "How do I add a column in SQLite?", "b": "How do I add a column in MySQL?", "same": false, "category": "entity"}
+{"a": "What's a good beginner workout for chest?", "b": "What's a good beginner workout for legs?", "same": false, "category": "entity"}
+{"a": "What's the tax filing deadline in the US?", "b": "What's the tax filing deadline in Canada?", "same": false, "category": "entity"}
+{"a": "Describe the life cycle of a butterfly", "b": "Describe the life cycle of a frog", "same": false, "category": "entity"}
+{"a": "How do I center text in LaTeX?", "b": "How do I center an image in LaTeX?", "same": false, "category": "entity"}
+{"a": "What's the difference between a Roth IRA and a traditional IRA?", "b": "What's the difference between a 401k and an IRA?", "same": false, "category": "entity"}
+{"a": "How do I set an environment variable on macOS?", "b": "How do I set an environment variable on Windows?", "same": false, "category": "entity"}
+{"a": "Who wrote the Iliad?", "b": "Who wrote the Aeneid?", "same": false, "category": "entity"}
+{"a": "Write a thank-you note to my teacher", "b": "Write a thank-you note to my boss", "same": false, "category": "entity"}
+{"a": "What is the half-life of carbon-14?", "b": "What is the half-life of uranium-238?", "same": false, "category": "entity"}
+{"a": "How do I configure nginx as a reverse proxy?", "b": "How do I configure Apache as a reverse proxy?", "same": false, "category": "entity"}
+{"a": "What's the best time to visit Japan?", "b": "What's the best time to visit Iceland?", "same": false, "category": "entity"}
+{"a": "How many calories are in a banana?", "b": "How many calories are in two bananas?", "same": false, "category": "number"}
+{"a": "Convert 10 miles to kilometers", "b": "Convert 100 miles to kilometers", "same": false, "category": "number"}
+{"a": "What is 12 times 12?", "b": "What is 12 times 13?", "same": false, "category": "number"}
+{"a": "Write a function that returns the first 10 Fibonacci numbers", "b": "Write a function that returns the first 20 Fibonacci numbers", "same": false, "category": "number"}
+{"a": "What's the monthly payment on a $300,000 mortgage at 6% for 30 years?", "b": "What's the monthly payment on a $300,000 mortgage at 7% for 30 years?", "same": false, "category": "number"}
+{"a": "Is 91 a prime number?", "b": "Is 97 a prime number?", "same": false, "category": "number"}
+{"a": "What does HTTP status 500 mean?", "b": "What does HTTP status 502 mean?", "same": false, "category": "number"}
+{"a": "What's the speed limit on US interstates for trucks over 10,000 lbs?", "b": "What's the speed limit on US interstates for cars?", "same": false, "category": "number"}
+{"a": "Give me a 3-day itinerary for Rome", "b": "Give me a 7-day itinerary for Rome", "same": false, "category": "number"}
+{"a": "How much is 20% tip on $45?", "b": "How much is 20% tip on $65?", "same": false, "category": "number"}
+{"a": "What is the derivative of x^2?", "b": "What is the derivative of x^3?", "same": false, "category": "number"}
+{"a": "What happened on September 11, 2001?", "b": "What happened on November 9, 1989?", "same": false, "category": "number"}
+{"a": "How many cups are in 2 quarts?", "b": "How many cups are in 2 gallons?", "same": false, "category": "number"}
+{"a": "What was Apple's revenue in 2020?", "b": "What was Apple's revenue in 2023?", "same": false, "category": "number"}
+{"a": "What's the IPv4 address range for 192.168.0.0/24?", "b": "What's the IPv4 address range for 192.168.0.0/16?", "same": false, "category": "number"}
+{"a": "Write a 5-question quiz about the solar system", "b": "Write a 20-question quiz about the solar system", "same": false, "category": "number"}
+{"a": "Convert 1 GB to MB", "b": "Convert 1 TB to MB", "same": false, "category": "number"}
+{"a": "What is the sum of angles in a triangle?", "b": "What is the sum of angles in a hexagon?", "same": false, "category": "number"}
+{"a": "What's the recommended dose of vitamin D for adults?", "b": "What's the recommended dose of vitamin D for infants?", "same": false, "category": "number"}
+{"a": "What did the 19th Amendment do?", "b": "What did the 14th Amendment do?", "same": false, "category": "number"}
+{"a": "What is 0.1 + 0.2 in floating point?", "b": "What is 0.1 + 0.3 in floating point?", "same": false, "category": "number"}
+{"a": "How long does it take to drive 300 miles at 60 mph?", "b": "How long does it take to drive 300 miles at 75 mph?", "same": false, "category": "number"}
+{"a": "Summarize chapter 1 of the book", "b": "Summarize chapter 3 of the book", "same": false, "category": "number"}
+{"a": "What's the capacity of a USB 2.0 port in Mbps?", "b": "What's the capacity of a USB 3.0 port in Mbps?", "same": false, "category": "number"}
+{"a": "What does the Python error 'list index out of range' on line 12 mean?", "b": "What does the Python error 'list index out of range' mean?", "same": false, "category": "scope"}
+{"a": "Is 1000 a perfect square?", "b": "Is 1024 a perfect square?", "same": false, "category": "number"}
+{"a": "What's the ideal room temperature for a newborn in Celsius?", "b": "What's the ideal room temperature for a newborn in Fahrenheit?", "same": false, "category": "format"}
+{"a": "How many minutes in 3.5 hours?", "b": "How many minutes in 5.3 hours?", "same": false, "category": "number"}
+{"a": "Round 3.14159 to 2 decimal places", "b": "Round 3.14159 to 4 decimal places", "same": false, "category": "number"}
+{"a": "What is the population of the 5 largest US cities?", "b": "What is the population of the 10 largest US cities?", "same": false, "category": "number"}
+{"a": "What's the fine for speeding 10 mph over in California?", "b": "What's the fine for speeding 30 mph over in California?", "same": false, "category": "number"}
+{"a": "What is 7 factorial?", "b": "What is 8 factorial?", "same": false, "category": "number"}
+{"a": "Should I take ibuprofen with food?", "b": "Should I avoid taking ibuprofen with food?", "same": false, "category": "negation"}
+{"a": "What are reasons to learn Rust?", "b": "What are reasons not to learn Rust?", "same": false, "category": "negation"}
+{"a": "Which fruits are high in sugar?", "b": "Which fruits are low in sugar?", "same": false, "category": "negation"}
+{"a": "Write a function that keeps only even numbers", "b": "Write a function that removes even numbers", "same": false, "category": "negation"}
+{"a": "Why do some people like cilantro?", "b": "Why do some people hate cilantro?", "same": false, "category": "negation"}
+{"a": "Which words are commonly capitalized in titles?", "b": "Which words are not capitalized in titles?", "same": false, "category": "negation"}
+{"a": "What should I do before a marathon?", "b": "What should I not do before a marathon?", "same": false, "category": "negation"}
+{"a": "Give me the pros of living in a big city", "b": "Give me the cons of living in a big city", "same": false, "category": "negation"}
+{"a": "Which SQL joins include unmatched rows?", "b": "Which SQL joins exclude unmatched rows?", "same": false, "category": "negation"}
+{"a": "Is coffee good for you?", "b": "Is coffee bad for you?", "same": false, "category": "negation"}
+{"a": "What makes a good manager?", "b": "What makes a bad manager?", "same": false, "category": "negation"}
+{"a": "Which animals can see in color?", "b": "Which animals are colorblind?", "same": false, "category": "negation"}
+{"a": "Which countries drive on the left?", "b": "Which countries drive on the right?", "same": false, "category": "negation"}
+{"a": "List the features that are included in the free plan", "b": "List the features that aren't included in the free plan", "same": false, "category": "negation"}
+{"a": "What should I pack for a beach vacation?", "b": "What should I not pack for a beach vacation?", "same": false, "category": "negation"}
+{"a": "Why is my code working?", "b": "Why is my code not working?", "same": false, "category": "negation"}
+{"a": "When is it appropriate to use a semicolon?", "b": "When is it wrong to use a semicolon?", "same": false, "category": "negation"}
+{"a": "Which vaccines are recommended for travel to Kenya?", "b": "Which vaccines are not needed for travel to Kenya?", "same": false, "category": "negation"}
+{"a": "Which design patterns increase coupling?", "b": "Which design patterns reduce coupling?", "same": false, "category": "negation"}
+{"a": "Write a regex that matches lines containing 'error'", "b": "Write a regex that matches lines not containing 'error'", "same": false, "category": "negation"}
+{"a": "Why do cats purr when happy?", "b": "Why do cats purr when they're not happy?", "same": false, "category": "negation"}
+{"a": "Which foods are allowed on a keto diet?", "b": "Which foods are banned on a keto diet?", "same": false, "category": "negation"}
+{"a": "What are signs a job interview went well?", "b": "What are signs a job interview went badly?", "same": false, "category": "negation"}
+{"a": "Is it legal to record a phone call in California?", "b": "Is it illegal to record a phone call in California without consent?", "same": false, "category": "negation"}
+{"a": "Which Python types are mutable?", "b": "Which Python types are immutable?", "same": false, "category": "negation"}
+{"a": "What are the benefits of intermittent fasting?", "b": "What are the risks of intermittent fasting?", "same": false, "category": "negation"}
+{"a": "Which planets have rings?", "b": "Which planets have no rings?", "same": false, "category": "negation"}
+{"a": "How do I make my website accessible?", "b": "What makes a website inaccessible?", "same": false, "category": "negation"}
+{"a": "Write unit tests for the success case of login()", "b": "Write unit tests for the failure cases of login()", "same": false, "category": "negation"}
+{"a": "Which plants grow well in shade?", "b": "Which plants need full sun?", "same": false, "category": "negation"}
+{"a": "When should you use recursion?", "b": "When should you avoid recursion?", "same": false, "category": "negation"}
+{"a": "What are arguments for a four-day work week?", "b": "What are arguments against a four-day work week?", "same": false, "category": "negation"}
+{"a": "Which HTTP methods are idempotent?", "b": "Which HTTP methods are not idempotent?", "same": false, "category": "negation"}
+{"a": "What should I say in a eulogy?", "b": "What should I avoid saying in a eulogy?", "same": false, "category": "negation"}
+{"a": "Which minerals are magnetic?", "b": "Which metals are non-magnetic?", "same": false, "category": "negation"}
+{"a": "Is it safe to fly while pregnant?", "b": "When is it unsafe to fly while pregnant?", "same": false, "category": "negation"}
+{"a": "Convert kilograms to pounds: 70", "b": "Convert pounds to kilograms: 70", "same": false, "category": "direction"}
+{"a": "Translate 'I love you' from English to Korean", "b": "Translate 'I love you' from Korean to English", "same": false, "category": "direction"}
+{"a": "How do I convert a list to a set in Python?", "b": "How do I convert a set to a list in Python?", "same": false, "category": "direction"}
+{"a": "How do I convert a PDF to Word?", "b": "How do I convert a Word document to PDF?", "same": false, "category": "direction"}
+{"a": "How do I export data from PostgreSQL to CSV?", "b": "How do I import data from CSV into PostgreSQL?", "same": false, "category": "direction"}
+{"a": "Convert this Celsius reading to Kelvin: 25", "b": "Convert this Kelvin reading to Celsius: 25", "same": false, "category": "direction"}
+{"a": "Convert 9am New York time to London time", "b": "Convert 9am London time to New York time", "same": false, "category": "direction"}
+{"a": "How do I convert a Unix timestamp to a date in JavaScript?", "b": "How do I convert a date to a Unix timestamp in JavaScript?", "same": false, "category": "direction"}
+{"a": "Did Spain colonize Mexico?", "b": "Did Mexico colonize Spain?", "same": false, "category": "direction"}
+{"a": "What's the flight time from New York to Tokyo?", "b": "What's the flight time from Tokyo to New York?", "same": false, "category": "direction"}
+{"a": "Convert binary 1010 to decimal", "b": "Convert decimal 1010 to binary", "same": false, "category": "direction"}
+{"a": "How do I migrate from MySQL to PostgreSQL?", "b": "How do I migrate from PostgreSQL to MySQL?", "same": false, "category": "direction"}
+{"a": "How do I switch from iPhone to Android?", "b": "How do I switch from Android to iPhone?", "same": false, "category": "direction"}
+{"a": "How do I base64 encode a string in Python?", "b": "How do I base64 decode a string in Python?", "same": false, "category": "direction"}
+{"a": "How do I serialize an object to JSON in C#?", "b": "How do I deserialize JSON to an object in C#?", "same": false, "category": "direction"}
+{"a": "Is the dollar stronger than the euro?", "b": "Is the euro stronger than the dollar?", "same": false, "category": "direction"}
+{"a": "How do I increase the font size in VS Code?", "b": "How do I decrease the font size in VS Code?", "same": false, "category": "direction"}
+{"a": "How do I scale up a Kubernetes deployment?", "b": "How do I scale down a Kubernetes deployment?", "same": false, "category": "direction"}
+{"a": "How do I convert Markdown to HTML?", "b": "How do I convert HTML to Markdown?", "same": false, "category": "direction"}
+{"a": "How do I add a user to a group in Linux?", "b": "How do I remove a user from a group in Linux?", "same": false, "category": "direction"}
+{"a": "Is a mile longer than a kilometer?", "b": "Is a kilometer longer than a mile?", "same": false, "category": "direction"}
+{"a": "How do I upgrade npm?", "b": "How do I downgrade npm?", "same": false, "category": "direction"}
+{"a": "How do I mount a drive in Linux?", "b": "How do I unmount a drive in Linux?", "same": false, "category": "direction"}
+{"a": "Did the student teach the professor?", "b": "Did the professor teach the student?", "same": false, "category": "direction"}
+{"a": "How do I convert an RGB color to hex?", "b": "How do I convert a hex color to RGB?", "same": false, "category": "direction"}
+{"a": "How do I follow someone on Twitter?", "b": "How do I unfollow someone on Twitter?", "same": false, "category": "direction"}
+{"a": "How do I subscribe to a YouTube channel?", "b": "How do I unsubscribe from a YouTube channel?", "same": false, "category": "direction"}
+{"a": "How do I enable dark mode in Chrome?", "b": "How do I disable dark mode in Chrome?", "same": false, "category": "direction"}
+{"a": "How do I merge two PDFs?", "b": "How do I split a PDF into two?", "same": false, "category": "direction"}
+{"a": "How do I compress an image without losing quality?", "b": "How do I upscale an image without losing quality?", "same": false, "category": "direction"}
+{"a": "How do I lock a cell in Excel?", "b": "How do I unlock a cell in Excel?", "same": false, "category": "direction"}
+{"a": "Which is heavier, a liter of water or a liter of oil?", "b": "Which is lighter, a liter of water or a liter of oil?", "same": false, "category": "direction"}
+{"a": "How do I indent a block of code in vim?", "b": "How do I unindent a block of code in vim?", "same": false, "category": "direction"}
+{"a": "How do I convert yards to meters?", "b": "How do I convert meters to yards?", "same": false, "category": "direction"}
+{"a": "What's the latest version of Python?", "b": "What was the first version of Python?", "same": false, "category": "time"}
+{"a": "What were the biggest tech news stories of 2019?", "b": "What were the biggest tech news stories of 2022?", "same": false, "category": "time"}
+{"a": "What's a good breakfast for before a workout?", "b": "What's a good breakfast for after a workout?", "same": false, "category": "time"}
+{"a": "What should I plant in my garden in spring?", "b": "What should I plant in my garden in fall?", "same": false, "category": "time"}
+{"a": "What was life like in ancient Rome?", "b": "What is life like in modern Rome?", "same": false, "category": "time"}
+{"a": "Who was the UK prime minister in 1990?", "b": "Who was the UK prime minister in 2010?", "same": false, "category": "time"}
+{"a": "What's the weather usually like in Seattle in July?", "b": "What's the weather usually like in Seattle in January?", "same": false, "category": "time"}
+{"a": "How should I prepare the night before an exam?", "b": "How should I prepare a month before an exam?", "same": false, "category": "time"}
+{"a": "What are the opening hours of most banks on Saturday?", "b": "What are the opening hours of most banks on weekdays?", "same": false, "category": "time"}
+{"a": "Summarize today's top headlines", "b": "Summarize this week's top headlines", "same": false, "category": "time"}
+{"a": "What did the Beatles release in 1965?", "b": "What did the Beatles release in 1969?", "same": false, "category": "time"}
+{"a": "What should a baby eat at 6 months?", "b": "What should a baby eat at 12 months?", "same": false, "category": "time"}
+{"a": "What fashion was popular in the 1970s?", "b": "What fashion was popular in the 1990s?", "same": false, "category": "time"}
+{"a": "What should I do in the first week at a new job?", "b": "What should I do in the last week at a job before leaving?", "same": false, "category": "time"}
+{"a": "What time does the sun set in London in winter?", "b": "What time does the sun set in London in summer?", "same": false, "category": "time"}
+{"a": "Who won the Super Bowl in 2015?", "b": "Who won the Super Bowl in 2020?", "same": false, "category": "time"}
+{"a": "How did people communicate before the telephone?", "b": "How did people communicate before the internet?", "same": false, "category": "time"}
+{"a": "What are morning routines of successful people?", "b": "What are evening routines of successful people?", "same": false, "category": "time"}
+{"a": "What should I eat the day before a marathon?", "b": "What should I eat the day after a marathon?", "same": false, "category": "time"}
+{"a": "What were the causes of the Great Depression?", "b": "What were the effects of the Great Depression?", "same": false, "category": "scope"}
+{"a": "What are the milestones of a 2-year-old?", "b": "What are the milestones of a 4-year-old?", "same": false, "category": "time"}
+{"a": "When does daylight saving time start in the US?", "b": "When does daylight saving time end in the US?", "same": false, "category": "time"}
+{"a": "What happened in the first 100 days of FDR's presidency?", "b": "What happened in the last year of FDR's presidency?", "same": false, "category": "time"}
+{"a": "What are good dinner ideas for a weeknight?", "b": "What are good dinner ideas for a holiday party?", "same": false, "category": "time"}
+{"a": "What was the stock market like in 2008?", "b": "What was the stock market like in 2021?", "same": false, "category": "time"}
+{"a": "What are the opening times of the Louvre on Tuesdays?", "b": "What are the opening times of the Louvre on Fridays?", "same": false, "category": "time"}
+{"a": "What music was popular in the Baroque period?", "b": "What music was popular in the Romantic period?", "same": false, "category": "time"}
+{"a": "How should I water tomatoes in early summer?", "b": "How should I water tomatoes in late summer?", "same": false, "category": "time"}
+{"a": "Write a happy birthday message in Spanish", "b": "Write a happy birthday message in French", "same": false, "category": "language"}
+{"a": "Write a bubble sort in C", "b": "Write a bubble sort in Python", "same": false, "category": "language"}
+{"a": "How do you say 'cheers' in German?", "b": "How do you say 'cheers' in Swedish?", "same": false, "category": "language"}
+{"a": "Write a fizzbuzz in Ruby", "b": "Write a fizzbuzz in Elixir", "same": false, "category": "language"}
+{"a": "Answer in Chinese: what is machine learning?", "b": "Answer in Arabic: what is machine learning?", "same": false, "category": "language"}
+{"a": "Write a for loop in Bash", "b": "Write a for loop in PowerShell", "same": false, "category": "language"}
+{"a": "Translate this paragraph into Hindi", "b": "Translate this paragraph into Bengali", "same": false, "category": "language"}
+{"a": "Write a hello world web server in Node.js", "b": "Write a hello world web server in Go", "same": false, "category": "language"}
+{"a": "How do you count to ten in Japanese?", "b": "How do you count to ten in Korean?", "same": false, "category": "language"}
+{"a": "Explain gravity in simple Spanish", "b": "Explain gravity in simple English", "same": false, "category": "language"}
+{"a": "Write a class for a bank account in Java", "b": "Write a class for a bank account in Kotlin", "same": false, "category": "language"}
+{"a": "What does 'carpe diem' mean in English?", "b": "What does 'carpe diem' mean in Italian?", "same": false, "category": "language"}
+{"a": "Write a SQL query for top 5 customers in T-SQL", "b": "Write a SQL query for top 5 customers in Oracle SQL", "same": false, "category": "language"}
+{"a": "Write a haiku in Japanese about rain", "b": "Write a haiku in English about rain", "same": false, "category": "language"}
+{"a": "How do I read a file line by line in C++?", "b": "How do I read a file line by line in C#?", "same": false, "category": "language"}
+{"a": "Write the alphabet in Greek", "b": "Write the alphabet in Russian", "same": false, "category": "language"}
+{"a": "Reply to this email in Portuguese", "b": "Reply to this email in Dutch", "same": false, "category": "language"}
+{"a": "Write a shell script to back up a folder for zsh", "b": "Write a script to back up a folder for Windows cmd", "same": false, "category": "language"}
+{"a": "Write a recursive factorial in Haskell", "b": "Write a recursive factorial in Lisp", "same": false, "category": "language"}
+{"a": "How do I say 'excuse me' in Mandarin?", "b": "How do I say 'excuse me' in Cantonese?", "same": false, "category": "language"}
+{"a": "Write a linked list in Swift", "b": "Write a linked list in Objective-C", "same": false, "category": "language"}
+{"a": "Give me common greetings in Hebrew", "b": "Give me common greetings in Yiddish", "same": false, "category": "language"}
+{"a": "Write a REST endpoint in Spring Boot", "b": "Write a REST endpoint in Express", "same": false, "category": "language"}
+{"a": "Translate 'happy new year' into Vietnamese", "b": "Translate 'happy new year' into Thai", "same": false, "category": "language"}
+{"a": "Write a regex in Python to find dates", "b": "Write a regex in sed to find dates", "same": false, "category": "language"}
+{"a": "Write a product description for headphones in 50 words", "b": "Write a product description for headphones in 500 words", "same": false, "category": "format"}
+{"a": "Give me a recipe for pancakes in metric units", "b": "Give me a recipe for pancakes in US cups", "same": false, "category": "format"}
+{"a": "Return the list of US states as CSV", "b": "Return the list of US states as a Python list", "same": false, "category": "format"}
+{"a": "Explain blockchain in one paragraph", "b": "Explain blockchain in a 10-slide outline", "same": false, "category": "format"}
+{"a": "Write a limerick about a cat", "b": "Write a sonnet about a cat", "same": false, "category": "format"}
+{"a": "Summarize this article in bullet points", "b": "Summarize this article as a single tweet", "same": false, "category": "format"}
+{"a": "Explain the French Revolution for a 10-year-old", "b": "Explain the French Revolution for a history PhD", "same": false, "category": "format"}
+{"a": "Write a professional LinkedIn post about my promotion", "b": "Write a funny Instagram caption about my promotion", "same": false, "category": "format"}
+{"a": "Give the answer as a table: planets and their moons", "b": "Give the answer as a paragraph: planets and their moons", "same": false, "category": "format"}
+{"a": "Write a story about a robot in the first person", "b": "Write a story about a robot in the third person", "same": false, "category": "format"}
+{"a": "Explain TCP handshakes with a diagram in ASCII", "b": "Explain TCP handshakes in plain prose", "same": false, "category": "format"}
+{"a": "Write a polite reminder to pay an invoice", "b": "Write a firm final notice to pay an invoice", "same": false, "category": "format"}
+{"a": "Give me a one-word answer: is the earth round?", "b": "Is the earth round? Explain the evidence.", "same": false, "category": "format"}
+{"a": "Write release notes for version 2.0 in Markdown", "b": "Write release notes for version 2.0 in HTML", "same": false, "category": "format"}
+{"a": "Explain photosynthesis with an analogy", "b": "Explain photosynthesis with chemical equations", "same": false, "category": "format"}
+{"a": "Write a children's story about a dragon", "b": "Write a horror story about a dragon", "same": false, "category": "format"}
+{"a": "List 5 interview questions for a data scientist with answers", "b": "List 5 interview questions for a data scientist without answers", "same": false, "category": "format"}
+{"a": "Write a commit message for adding login, conventional commits style", "b": "Write a commit message for adding login, one short line", "same": false, "category": "format"}
+{"a": "Reply 'yes' or 'no': is Python dynamically typed?", "b": "Is Python dynamically typed? Give examples.", "same": false, "category": "format"}
+{"a": "Write a cheerful wedding toast", "b": "Write a sentimental wedding toast", "same": false, "category": "format"}
+{"a": "Describe a sunset in the style of Hemingway", "b": "Describe a sunset in the style of Shakespeare", "same": false, "category": "format"}
+{"a": "Write the SQL schema as CREATE TABLE statements", "b": "Write the SQL schema as an ER diagram in Mermaid", "same": false, "category": "format"}
+{"a": "Explain Docker to a non-technical manager", "b": "Explain Docker to a Linux kernel developer", "same": false, "category": "format"}
+{"a": "Write a rap verse about coffee", "b": "Write a free-verse poem about coffee", "same": false, "category": "format"}
+{"a": "Write the meeting agenda as a numbered list", "b": "Write the meeting agenda as a calendar invite description", "same": false, "category": "format"}
+{"a": "Give me Python type hints for this function", "b": "Give me a docstring for this function", "same": false, "category": "format"}
+{"a": "Explain the theory of relativity in under 50 words", "b": "Explain the theory of relativity in depth", "same": false, "category": "format"}
+{"a": "Write a joke about programmers", "b": "Write a serious essay about programmers", "same": false, "category": "format"}
+{"a": "Format this date as ISO 8601: March 5 2024", "b": "Format this date as MM/DD/YYYY: March 5 2024", "same": false, "category": "format"}
+{"a": "Write a résumé summary in a confident tone", "b": "Write a résumé summary in a modest tone", "same": false, "category": "format"}
+{"a": "How do I install Docker?", "b": "How do I uninstall Docker completely?", "same": false, "category": "scope"}
+{"a": "What is a mortgage?", "b": "How do I qualify for a mortgage?", "same": false, "category": "scope"}
+{"a": "What is Kubernetes?", "b": "How do I debug a crashing Kubernetes pod?", "same": false, "category": "scope"}
+{"a": "How do I write a for loop in Python?", "b": "How do I write a while loop in Python?", "same": false, "category": "scope"}
+{"a": "What are the symptoms of COVID?", "b": "How long is COVID contagious?", "same": false, "category": "scope"}
+{"a": "How do I create a virtual environment in Python?", "b": "How do I activate a virtual environment in Python?", "same": false, "category": "scope"}
+{"a": "What is inflation?", "b": "How does the central bank fight inflation?", "same": false, "category": "scope"}
+{"a": "How do I make a pull request on GitHub?", "b": "How do I review a pull request on GitHub?", "same": false, "category": "scope"}
+{"a": "What is a black hole?", "b": "How are black holes detected?", "same": false, "category": "scope"}
+{"a": "How do I train for a 5k?", "b": "How do I recover after a 5k?", "same": false, "category": "scope"}
+{"a": "How do I write a resume?", "b": "How do I format a resume?", "same": false, "category": "scope"}
+{"a": "What is the capital of Australia?", "b": "What is the largest city in Australia?", "same": false, "category": "scope"}
+{"a": "How do I create a React component?", "b": "How do I test a React component?", "same": false, "category": "scope"}
+{"a": "What is a REST API?", "b": "How do I secure a REST API?", "same": false, "category": "scope"}
+{"a": "How do I open a bank account?", "b": "How do I close a bank account?", "same": false, "category": "scope"}
+{"a": "What does a neuron look like?", "b": "How does a neuron fire?", "same": false, "category": "scope"}
+{"a": "How do I make sourdough starter?", "b": "How do I keep a sourdough starter alive?", "same": false, "category": "scope"}
+{"a": "What causes migraines?", "b": "How do I treat a migraine?", "same": false, "category": "scope"}
+{"a": "How do I get a passport?", "b": "How do I renew a passport?", "same": false, "category": "scope"}
+{"a": "What is a hash function?", "b": "What is a hash collision?", "same": false, "category": "scope"}
+{"a": "How do I start a podcast?", "b": "How do I monetize a podcast?", "same": false, "category": "scope"}
+{"a": "What is the Pythagorean theorem?", "b": "Prove the Pythagorean theorem", "same": false, "category": "scope"}
+{"a": "How do I count words in a file with Linux?", "b": "How do I count lines in a file with Linux?", "same": false, "category": "scope"}
+{"a": "What's the population of Tokyo?", "b": "What's the area of Tokyo?", "same": false, "category": "scope"}
+{"a": "How do I get the length of a string in JavaScript?", "b": "How do I get a substring in JavaScript?", "same": false, "category": "scope"}
+{"a": "How do I apply for a credit card?", "b": "How do I improve my credit score?", "same": false, "category": "scope"}
+{"a": "How do I paint a room?", "b": "How do I choose a paint color for a room?", "same": false, "category": "scope"}
+{"a": "What is GDP?", "b": "How is GDP calculated?", "same": false, "category": "scope"}
+{"a": "How do I make a website responsive?", "b": "How do I make a website load faster?", "same": false, "category": "scope"}
+{"a": "How do I write a good thesis statement?", "b": "How do I write a good conclusion paragraph?", "same": false, "category": "scope"}
+{"a": "What are the side effects of melatonin?", "b": "What is the right dose of melatonin?", "same": false, "category": "scope"}
+{"a": "How do I find the mean of a list in Python?", "b": "How do I find the median of a list in Python?", "same": false, "category": "scope"}
+{"a": "What is the plot of Romeo and Juliet?", "b": "What are the themes of Romeo and Juliet?", "same": false, "category": "scope"}
+{"a": "How do I get rid of fruit flies?", "b": "Where do fruit flies come from?", "same": false, "category": "scope"}
+{"a": "How do I read a stock chart?", "b": "How do I buy my first stock?", "same": false, "category": "scope"}
+{"a": "How do I take a screenshot on a Mac?", "b": "Where are screenshots saved on a Mac?", "same": false, "category": "scope"}
+{"a": "What is the difference between affect and effect?", "b": "What is the difference between affect and impact?", "same": false, "category": "entity"}
+{"a": "How do I learn guitar chords?", "b": "How do I learn guitar scales?", "same": false, "category": "scope"}
+{"a": "What does this error mean: TypeError: undefined is not a function", "b": "What does this error mean: TypeError: Cannot read properties of undefined", "same": false, "category": "entity"}
+{"a": "Fix the bug in this code: for i in range(10) print(i)", "b": "Fix the bug in this code: for i in range(10): print(j)", "same": false, "category": "entity"}
+{"a": "What does this function return: def f(x): return x * 2", "b": "What does this function return: def f(x): return x ** 2", "same": false, "category": "entity"}
+{"a": "Explain this SQL: SELECT * FROM users WHERE age > 18", "b": "Explain this SQL: SELECT * FROM users WHERE age < 18", "same": false, "category": "direction"}
+{"a": "Is this sentence grammatical: 'Me and him went home'?", "b": "Is this sentence grammatical: 'He and I went home'?", "same": false, "category": "entity"}
+{"a": "Summarize this review: 'The food was great but service was slow'", "b": "Summarize this review: 'The service was great but food was cold'", "same": false, "category": "entity"}
+{"a": "What's the sentiment of: 'I can't believe how good this is'", "b": "What's the sentiment of: 'I can't believe how bad this is'", "same": false, "category": "negation"}
+{"a": "Classify this email as spam or not: 'You won a free iPhone!'", "b": "Classify this email as spam or not: 'Your meeting is moved to 3pm'", "same": false, "category": "entity"}
+{"a": "Extract the date from: 'Meeting on June 5th at noon'", "b": "Extract the date from: 'Meeting on July 9th at noon'", "same": false, "category": "number"}
+{"a": "Correct the spelling: 'recieve the pakage'", "b": "Correct the spelling: 'seperate the pakages'", "same": false, "category": "entity"}
+{"a": "Translate to French: 'The cat is on the table'", "b": "Translate to French: 'The dog is under the table'", "same": false, "category": "entity"}
+{"a": "Count the vowels in 'banana'", "b": "Count the vowels in 'bandana'", "same": false, "category": "entity"}
+{"a": "Reverse the string 'hello world'", "b": "Reverse the string 'hello there'", "same": false, "category": "entity"}
+{"a": "What's the next number: 2, 4, 8, 16?", "b": "What's the next number: 2, 4, 6, 8?", "same": false, "category": "number"}
+{"a": "Is 'racecar' a palindrome?", "b": "Is 'racecars' a palindrome?", "same": false, "category": "entity"}
+{"a": "Sort these numbers: 5, 3, 9, 1", "b": "Sort these numbers: 5, 3, 9, 1, 7", "same": false, "category": "number"}
+{"a": "What's the capital of the country where the Eiffel Tower is?", "b": "What's the capital of the country where the Colosseum is?", "same": false, "category": "entity"}
+{"a": "Rewrite this to sound friendlier: 'Send the report now.'", "b": "Rewrite this to sound more formal: 'Send the report now.'", "same": false, "category": "format"}
+{"a": "Name a word that rhymes with 'cat'", "b": "Name a word that rhymes with 'cart'", "same": false, "category": "entity"}
+{"a": "What's 3 + 4 * 2?", "b": "What's (3 + 4) * 2?", "same": false, "category": "number"}
+{"a": "Is this valid JSON: {\"a\": 1}", "b": "Is this valid JSON: {'a': 1}", "same": false, "category": "entity"}
+{"a": "Which is bigger: 9.11 or 9.9?", "b": "Which is bigger: 9.11 or 9.1?", "same": false, "category": "number"}
+{"a": "How many r's are in 'strawberry'?", "b": "How many r's are in 'raspberry'?", "same": false, "category": "entity"}
+{"a": "What day of the week was January 1, 2000?", "b": "What day of the week was January 1, 2001?", "same": false, "category": "number"}
+{"a": "Write an SQL query to find employees with salary above 50000", "b": "Write an SQL query to find employees with salary below 50000", "same": false, "category": "direction"}
+{"a": "Explain why the sky is blue during the day", "b": "Explain why the sky is red at sunset", "same": false, "category": "time"}
+{"a": "Write a function that checks if a year is a leap year in Python", "b": "Write a function that checks if a year is a leap year in Python, without using the calendar module", "same": false, "category": "scope"}
+{"a": "How do I center a div with flexbox?", "b": "How do I center a div with CSS grid?", "same": false, "category": "entity"}
+{"a": "Make this paragraph shorter", "b": "Make this paragraph longer", "same": false, "category": "direction"}
+{"a": "What's the opposite of 'generous'?", "b": "What's a synonym for 'generous'?", "same": false, "category": "negation"}
+{"a": "Give me a word that means happy", "b": "Give me a word that means unhappy", "same": false, "category": "negation"}
+{"a": "Write a test where the user is logged in", "b": "Write a test where the user is logged out", "same": false, "category": "negation"}
+{"a": "Is a tomato a fruit?", "b": "Is a tomato a vegetable?", "same": false, "category": "entity"}
+{"a": "Name three mammals that lay eggs", "b": "Name three mammals that live in the ocean", "same": false, "category": "scope"}
+{"a": "Write an apology email for missing a deadline", "b": "Write an email asking for a deadline extension", "same": false, "category": "scope"}
