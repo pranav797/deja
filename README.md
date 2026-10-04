@@ -2,6 +2,21 @@
 
 A semantic cache for LLM calls. If a new prompt *means the same thing* as one it has already answered, Déjà returns the stored answer instead of calling the model.
 
+<!-- DEMO VIDEO: drag deja-demo.mp4 onto this line in GitHub's editor -->
+
+*Demo: Open WebUI (left) chatting with gpt-5.5 through Déjà, with Déjà's live dashboard (right). Two long answers take 34–43 s. Reworded versions of the same questions come back from the cache in under 2 s, even in a new chat. A follow-up ("explain that more simply") is never reused. "Convert 100 celsius to fahrenheit" scores 0.972 against the Fahrenheit-to-Celsius question, but the checker blocks the match. Dollar figures use gpt-5 list prices, since Déjà has no price for gpt-5.5 yet.*
+
+## Why this matters
+
+LLM calls are slow and expensive, and real traffic repeats itself: support bots get the same questions in different words, people re-ask things in new chats, and agents redo the same steps. Every repeat is paid for in full.
+
+- An **exact-match cache** only catches identical text, so a reworded question misses.
+- A **plain semantic cache** catches rewordings but also hands out wrong answers. To an embedding model, "convert 100°F to °C" and "convert 100°C to °F" look almost identical (0.972 in the demo).
+
+Déjà matches by meaning and then has a small model confirm each match, so you get a cache's speed and savings without serving answers to a different question. On 541 deliberately tricky question pairs, it wrongly reused an answer 2 times (0.4%). See [Results](#results-text-embedding-3-small-oct-2026).
+
+## How it works
+
 Only the last user message is matched by meaning. The model, system prompt, temperature and tools must match exactly. Earlier turns of the conversation don't have to: a question asked mid-chat can reuse an answer from another chat, but only after a second checker (gpt-4.1-mini) reads the conversation and the cached answer and agrees it's a correct reply there. That stops reuse for follow-ups ("what about France?"), and when earlier messages set constraints ("I'm vegan") or instructions ("reply in Spanish").
 
 Embedding similarity only finds a *candidate*. Before a semantic hit is served, a small model (gpt-4o-mini by default) checks that one answer really fits both requests. Embeddings alone confuse "translate to French" with "translate from French".
