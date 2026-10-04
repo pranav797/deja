@@ -2,9 +2,9 @@
 
 A semantic cache for LLM calls. If a new prompt *means the same thing* as one it has already answered, Déjà returns the stored answer instead of calling the model.
 
-<!-- DEMO VIDEO: drag deja-demo.mp4 onto this line in GitHub's editor -->
+## Demo
 
-*Demo: Open WebUI (left) chatting with gpt-5.5 through Déjà, with Déjà's live dashboard (right). Two long answers take 34–43 s. Reworded versions of the same questions come back from the cache in under 2 s, even in a new chat. A follow-up ("explain that more simply") is never reused. "Convert 100 celsius to fahrenheit" scores 0.972 against the Fahrenheit-to-Celsius question, but the checker blocks the match. Dollar figures use gpt-5 list prices, since Déjà has no price for gpt-5.5 yet.*
+https://github.com/user-attachments/assets/fe581904-7f41-466f-ae59-9e0eac0220a1
 
 ## Why this matters
 
